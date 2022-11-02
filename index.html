@@ -48,16 +48,16 @@
       <div class="container">
         <h1 class="hero-text">Ефективні рішення для вашого бізнесу</h1>
         <button data-modal-open class="hero-batton" type="button">Замовити послугу</button>
-                          <div class="backdrop is-hidden" data-modal>
-                            <div class="modal">
-                              <button class="modal-close-btn" type="button" data-modal-close>
-                                <svg class="modal-close-btn-style">
-                                  <use href="./images/icons.svg#close-btn"></use>
-                                </svg>
-                                <p></p>
-                              </button>
-                            </div>
-                          </div>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="modal-close-btn" type="button" data-modal-close>
+                <svg class="modal-close-btn-style">
+                  <use href="./images/icons.svg#close-btn"></use>
+                </svg>
+                <p></p>
+              </button>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -121,13 +121,22 @@
         <h2 class="index-h2-style ">Чим ми займаємося</h2>
         <ul class="wdwd-list">
           <li>
-            <img src="./images/box1.jpg" width="370" alt="написання коду" />
+            <div class="wdwd-position">
+              <img  src="./images/box1.jpg" width="370" alt="написання коду" />
+              <p class="wdwd-description">десктопні додатки</p>
+            </div>
           </li>
           <li>
-            <img src="./images/box2.jpg" width="370" alt="моделювання додатків" />
+            <div class="wdwd-position">
+              <img class="wdwd-position" src="./images/box2.jpg" width="370" alt="моделювання додатків" />
+              <p class="wdwd-description">мобільні додатки</p>                        
+            </div>
           </li>
           <li>
-            <img src="./images/box3.jpg" width="370" alt="створення дизайну" />
+            <div class="wdwd-position">                        
+              <img class="wdwd-position" src="./images/box3.jpg" width="370" alt="створення дизайну" />
+              <p class="wdwd-description">дизайнерські рішення</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -246,8 +255,8 @@
       </div>
     </section>
 
+    <!--regular customers-->
     <section class="customers-padding">
-      <!--regular customers-->
 
       <div class="container ">
         <h2 class="index-h2-style">Постійні клієнти</h2>
