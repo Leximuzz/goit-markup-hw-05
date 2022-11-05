@@ -26,7 +26,6 @@ a {
 }
 
 a:hover {
-  font-style: normal;
   color: var(--main-blue-color);
 }
 
@@ -150,6 +149,7 @@ li {
   width: 16px;
   height: 16px;
   margin: auto 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-icon {
@@ -164,7 +164,8 @@ li {
   line-height: 1.15;
   letter-spacing: 0.02em;
   color: var(--address-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-list {
@@ -179,7 +180,7 @@ li {
 
 .address-link:hover::after {
   color: var(--address-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .address-link:hover .address-link-icon-style {
@@ -198,6 +199,17 @@ li {
   color: var(--main-blue-color);
 }
 
+.selected-link::after {
+  display: block;
+  opacity: 1;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-blue-color);
+  margin-top: 28px;
+  content: '';
+  border-radius: 2px;
+}
+
 /*hero-section*/
 
 .hero-style {
@@ -205,7 +217,8 @@ li {
   max-width: 1600px;
   background-color: var(--section-dark-bg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+      rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
   padding: 200px 0;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -238,13 +251,12 @@ li {
   padding: 10px 32px;
   border-radius: 4px;
   border: none;
-  transition: background-color 250ms,
-    cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-batton:hover {
   background-color: var(--blue-batton-hover);
-  transition: background-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .hero-batton:focus {
@@ -261,7 +273,9 @@ li {
   height: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 250ms, visibility 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -472,12 +486,13 @@ li {
   justify-content: center;
   background-color: var(--white-color);
   border-radius: 50%;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover {
   background-color: var(--main-blue-color);
-  transition: background-color 250ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:focus {
@@ -487,7 +502,7 @@ li {
 
 .social-link:hover .social-icon {
   fill: var(--white-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .social-link:focus .social-icon {
@@ -499,6 +514,7 @@ li {
   width: 20px;
   height: 20px;
   fill: var(--customers-border);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*regular-customers*/
@@ -522,22 +538,26 @@ li {
   justify-content: center;
   border: 1px solid var(--customers-border);
   border-radius: 4px;
+
 }
 
 .customer-logo {
   width: 106px;
   height: 60px;
   fill: var(--customers-border);
+  transition:
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-link:hover {
   border-color: var(--main-blue-color);
-  transition: border-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .customer-link:hover .customer-logo {
   fill: var(--main-blue-color);
-  transition: fill 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .customer-link:focus {
@@ -585,11 +605,12 @@ li {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link-footer:hover {
   color: var(--main-blue-color);
-  transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .footer-address-style {
@@ -632,6 +653,9 @@ li {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
@@ -642,7 +666,7 @@ li {
 
 .footer-social-link:hover {
   background-color: var(--main-blue-color);
-  transition: background-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .footer-social-link:focus {
@@ -656,7 +680,6 @@ li {
 
 .footer-social-link:focus .social-icon {
   fill: var(--white-color);
-  transition: fill 250ms, cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
 
@@ -686,14 +709,20 @@ li {
   padding: 6px 22px;
   border: 0;
   background-color: var(--section-light-bg);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-style:hover {
   color: var(--white-color);
   background-color: var(--main-blue-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  box-shadow:
+    0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: background-color 250ms, fill 250ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .button-style:focus {
@@ -747,20 +776,25 @@ li {
 .portfolio-card {
   width: 370px;
   background-color: var(--white-color);
+
 }
 
 .portfolio-card-img-size {
   width: 100%;
 }
 
-.portfolio-card:hover .card-description {
+.card-shadow {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-shadow:hover {
   box-shadow:
     0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-card:focus .card-description {
+.card-shadow:focus {
   box-shadow:
     0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -769,7 +803,6 @@ li {
 }
 
 .card-description {
-
   background-color: var(--white-color);
   padding: 24px 20px;
   border-left: 1px solid var(--card-border);
@@ -780,6 +813,7 @@ li {
 .porfolio-description {
   position: relative;
   overflow: hidden;
+  
 }
 
 .site-description {
@@ -797,6 +831,7 @@ li {
   line-height: 1.56;
   letter-spacing: 0.03em;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .portfolio-card:focus .site-description {
