@@ -145,6 +145,7 @@ li {
 }*/
 
 .address-link-icon-style {
+  fill: var(--text-color);
    width: 16px;
   height: 16px;
   margin: auto 10px;
@@ -534,7 +535,7 @@ li {
   justify-content: center;
   border: 1px solid var(--customers-border);
   border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)ж
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -649,8 +650,7 @@ li {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
